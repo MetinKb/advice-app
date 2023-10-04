@@ -7,6 +7,7 @@ export default function Advices() {
 
     useEffect(() => {
         getAdvice()
+        console.log(advice)
     }, [])
 
     function postTweet() {
@@ -22,6 +23,7 @@ export default function Advices() {
             const adviceText = await data.slip.advice
             setAdvice(adviceText)
             setAdviceFlag(false)
+            console.log(adviceText)
         } catch (error) {
             console.log(error)
         }
@@ -40,9 +42,9 @@ export default function Advices() {
                 </div>
                 <div className="h-1/3 p-4 flex items-center justify-around">
                     <button onClick={postTweet} className="bg-blue-400 w-20 rounded-lg p-2 text-white hover:brightness-105 shadow-[0_0px_10px_1px_rgba(0,0,0,.3)] mx-2">Twitter</button>
-                    <button onClick={getAdvice} className="w-20 rounded-lg p-2 text-black bg-yellow-400 hover:brightness-105 shadow-[0_0px_10px_1px_rgba(0,0,0,.3)]" disabled={adviceFlag} >Next</button>
+                    <button onClick={getAdvice} className=" bg-yellow-400 w-20 rounded-lg p-2 text-black  hover:brightness-105 shadow-[0_0px_10px_1px_rgba(0,0,0,.3)]" disabled={adviceFlag} > Next</button>
                 </div>
             </div>
-        </main>
+        </main >
     )
 }
