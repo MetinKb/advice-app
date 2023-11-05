@@ -1,4 +1,4 @@
-# Advice App
+# Responsive Advice App
 
 When the Twitter button is pressed, the advice content opens in a new tab, ready to be tweeted.
 <br>
